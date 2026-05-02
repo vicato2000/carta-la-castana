@@ -193,8 +193,8 @@
             3,
             7
           ],
-          "priceFull": 9,
-          "available": true
+          "available": true,
+          "price": 9
         },
         {
           "id": "san-jacobo",
@@ -205,7 +205,7 @@
             7
           ],
           "available": true,
-          "priceFull": 10
+          "price": 9
         }
       ]
     },
