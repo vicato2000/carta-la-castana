@@ -1,0 +1,336 @@
+{
+  "config": {
+    "barName": "Bar La Castana",
+    "subtitle": "Beber que sus llene",
+    "adminPasswordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "footerNote": "¡Pregunte a nuestro personal si hay algo fuera de carta!",
+    "allergenNote": "Si tiene alguna alergia o intolerancia alimentaria, por favor, informe a nuestro personal."
+  },
+  "allergens": [
+    {
+      "id": 1,
+      "name": "Gluten",
+      "icon": "🌾"
+    },
+    {
+      "id": 2,
+      "name": "Crustáceos",
+      "icon": "🦐"
+    },
+    {
+      "id": 3,
+      "name": "Huevos",
+      "icon": "🥚"
+    },
+    {
+      "id": 4,
+      "name": "Pescado",
+      "icon": "🐟"
+    },
+    {
+      "id": 5,
+      "name": "Cacahuetes",
+      "icon": "🥜"
+    },
+    {
+      "id": 6,
+      "name": "Soja",
+      "icon": "🫘"
+    },
+    {
+      "id": 7,
+      "name": "Lácteos",
+      "icon": "🥛"
+    },
+    {
+      "id": 8,
+      "name": "Frutos secos",
+      "icon": "🌰"
+    },
+    {
+      "id": 9,
+      "name": "Apio",
+      "icon": "🥬"
+    },
+    {
+      "id": 10,
+      "name": "Mostaza",
+      "icon": "🟡"
+    },
+    {
+      "id": 11,
+      "name": "Sésamo",
+      "icon": "🫘"
+    },
+    {
+      "id": 12,
+      "name": "Sulfitos",
+      "icon": "🍷"
+    },
+    {
+      "id": 13,
+      "name": "Altramuces",
+      "icon": "🌱"
+    },
+    {
+      "id": 14,
+      "name": "Moluscos",
+      "icon": "🐚"
+    }
+  ],
+  "sections": [
+    {
+      "id": "tapas",
+      "name": "Tapas",
+      "icon": "🍽️",
+      "order": 0,
+      "visible": true,
+      "hasDualPricing": true,
+      "priceLabelSmall": "Media Ración",
+      "priceLabelFull": "Ración Entera",
+      "items": [
+        {
+          "id": "patatas-bravas",
+          "name": "Patatas Bravas",
+          "allergens": [
+            1
+          ],
+          "priceHalf": 3,
+          "priceFull": 5,
+          "available": true
+        },
+        {
+          "id": "bacalao",
+          "name": "Bacalao",
+          "allergens": [
+            1,
+            4
+          ],
+          "priceHalf": 8,
+          "priceFull": 14.5,
+          "available": true
+        },
+        {
+          "id": "calamares",
+          "name": "Calamares",
+          "allergens": [
+            1,
+            4,
+            14
+          ],
+          "priceHalf": 5,
+          "priceFull": 9,
+          "available": true
+        },
+        {
+          "id": "carne-con-tomate",
+          "name": "Carne con tomate",
+          "allergens": [
+            1
+          ],
+          "priceHalf": 3.5,
+          "priceFull": 5.5,
+          "available": true
+        },
+        {
+          "id": "orejitas-en-salsa",
+          "name": "Orejitas en salsa",
+          "allergens": [
+            1
+          ],
+          "priceHalf": 3.5,
+          "priceFull": 5.5,
+          "available": true
+        },
+        {
+          "id": "callos-con-tomate",
+          "name": "Callos con tomate",
+          "allergens": [
+            1
+          ],
+          "priceHalf": 3.5,
+          "priceFull": 5.5,
+          "available": true
+        },
+        {
+          "id": "rinones-al-jerez",
+          "name": "Riñones al jerez",
+          "allergens": [
+            1,
+            12
+          ],
+          "priceHalf": 3.5,
+          "priceFull": 5.5,
+          "available": true
+        },
+        {
+          "id": "lechon",
+          "name": "Lechón",
+          "allergens": [
+            1
+          ],
+          "priceFull": 13,
+          "available": true,
+          "priceHalf": 7
+        },
+        {
+          "id": "croquetas-variadas",
+          "name": "Croquetas variadas",
+          "allergens": [
+            1,
+            3,
+            7
+          ],
+          "priceHalf": 5,
+          "priceFull": 9,
+          "available": true
+        },
+        {
+          "id": "flamenquin",
+          "name": "Flamenquín",
+          "allergens": [
+            1,
+            3,
+            7
+          ],
+          "priceFull": 9,
+          "available": true
+        },
+        {
+          "id": "san-jacobo",
+          "name": "San Jacobo",
+          "allergens": [
+            1,
+            3,
+            7
+          ],
+          "priceFull": 9,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas",
+      "icon": "🍺",
+      "order": 1,
+      "visible": true,
+      "items": [
+        {
+          "id": "refrescos-zumos-batidos",
+          "name": "Refrescos, zumos y batidos",
+          "price": 2,
+          "available": true
+        },
+        {
+          "id": "tercios-cerveza",
+          "name": "Tercios de cerveza (incluida sin gluten)",
+          "price": 2,
+          "available": true
+        },
+        {
+          "id": "tercios-alhambra-heineken",
+          "name": "Tercios de Alhambra 1925 y Heineken",
+          "price": 2.2,
+          "available": true
+        },
+        {
+          "id": "cervezas-pequenas",
+          "name": "Cervezas pequeñas",
+          "price": 1.4,
+          "available": true
+        },
+        {
+          "id": "cervezas-tostada-shandy-radler",
+          "name": "Cervezas Tostada, Shandy y Radler",
+          "price": 1.5,
+          "available": true
+        },
+        {
+          "id": "mosto-vaso-grande",
+          "name": "Mosto en vaso grande",
+          "price": 2,
+          "available": true
+        },
+        {
+          "id": "mosto-vaso-tubo",
+          "name": "Mosto en vaso de tubo",
+          "price": 1.8,
+          "available": true
+        },
+        {
+          "id": "tinto-vaso-grande",
+          "name": "Tinto en vaso grande",
+          "price": 2.5,
+          "available": true
+        },
+        {
+          "id": "tinto-vaso-tubo",
+          "name": "Tinto en vaso de tubo",
+          "price": 1.8,
+          "available": true
+        },
+        {
+          "id": "rioja-copa",
+          "name": "Rioja (copa)",
+          "price": 2,
+          "available": true
+        },
+        {
+          "id": "agua-pequena",
+          "name": "Botella de agua pequeña",
+          "price": 1,
+          "available": true
+        },
+        {
+          "id": "agua-grande",
+          "name": "Botella de agua grande",
+          "price": 1.5,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "cubatas",
+      "name": "Cubatas",
+      "icon": "🥃",
+      "order": 2,
+      "visible": true,
+      "items": [
+        {
+          "id": "dyc-larios",
+          "name": "DYC y Larios",
+          "price": 3.8,
+          "available": true
+        },
+        {
+          "id": "resto-marcas",
+          "name": "Resto de marcas",
+          "price": 4.3,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "vinos",
+      "name": "Vinos",
+      "icon": "🍷",
+      "order": 3,
+      "visible": true,
+      "items": [
+        {
+          "id": "vino-blanco-moriles",
+          "name": "Vino blanco Moriles (copa)",
+          "price": 1.2,
+          "available": true
+        },
+        {
+          "id": "vino-frizzante",
+          "name": "Vino Frizzante (copa)",
+          "price": 2.5,
+          "available": true
+        }
+      ]
+    }
+  ]
+}

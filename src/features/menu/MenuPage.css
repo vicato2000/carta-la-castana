@@ -1,0 +1,349 @@
+/* ═══════════════════════════════════════════════ */
+/*   BAR LA CASTANA — Estilo Taberna Clásica      */
+/* ═══════════════════════════════════════════════ */
+
+.menu-loading, .menu-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 1rem;
+  color: var(--gold);
+  font-family: var(--font-body);
+}
+.menu-loading-spinner {
+  width: 40px; height: 40px;
+  border: 3px solid var(--surface-light);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.menu-error-detail { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Page */
+.menu-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(60, 40, 20, 0.3) 0%, transparent 60%),
+    var(--bg-dark);
+}
+
+/* Header — taberna clásica */
+.menu-header {
+  position: relative;
+  padding: 2.5rem 1.5rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(28, 22, 16, 1) 0%, rgba(20, 16, 11, 0.95) 100%);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.menu-header-ornament {
+  color: var(--gold-dim);
+  font-size: 0.7rem;
+  letter-spacing: 12px;
+  margin: 0.5rem 0;
+}
+
+.menu-header-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0.25rem 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu-header-rule {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  margin: 0.4rem auto;
+}
+
+.menu-header-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 3vw, 1.05rem);
+  color: var(--text-muted);
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+/* Section Navigation — tabs rústicos */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(20, 16, 11, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+}
+.section-nav-inner {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.section-nav-inner::-webkit-scrollbar { display: none; }
+.section-nav-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.65rem 0.75rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s, background 0.3s;
+  position: relative;
+  white-space: nowrap;
+}
+.section-nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 40%;
+  height: 2px;
+  background: var(--wine-light);
+  transition: transform 0.3s ease;
+}
+.section-nav-btn.active { color: var(--gold); }
+.section-nav-btn.active::after { transform: translateX(-50%) scaleX(1); }
+.section-nav-btn:hover { color: var(--gold-light); background: rgba(var(--gold-rgb), 0.04); }
+.section-nav-icon { font-size: 1rem; }
+.section-nav-label { font-weight: 600; }
+
+/* Content */
+.menu-content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem 2rem;
+}
+
+/* Section */
+.menu-section {
+  margin-bottom: 2rem;
+  scroll-margin-top: 60px;
+}
+.menu-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+  padding-top: 0.5rem;
+}
+.menu-section-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+.menu-section-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* Dual Pricing */
+.menu-dual-pricing-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+  padding: 0 0.6rem 0.4rem;
+}
+.menu-pricing-label {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 80px;
+  text-align: right;
+}
+
+/* Items List (dual pricing) */
+.menu-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.menu-item-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-bottom: 1px dotted rgba(var(--gold-rgb), 0.1);
+  transition: background 0.3s;
+  animation: fadeIn 0.4s ease both;
+}
+.menu-item-row:last-child { border-bottom: none; }
+.menu-item-row:hover { background: rgba(var(--gold-rgb), 0.03); }
+.menu-item-name-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.menu-item-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.92rem;
+}
+.menu-item-allergens { font-size: 0.72rem; color: var(--text-muted); }
+.menu-item-desc { font-size: 0.8rem; color: var(--text-muted); width: 100%; }
+.menu-item-price {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--gold-light);
+  font-size: 0.88rem;
+  width: 80px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Items Grid (single pricing) */
+.menu-items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.menu-item-card {
+  border-bottom: 1px dotted rgba(var(--gold-rgb), 0.1);
+  transition: background 0.3s;
+  animation: fadeIn 0.4s ease both;
+}
+.menu-item-card:last-child { border-bottom: none; }
+.menu-item-card:hover { background: rgba(var(--gold-rgb), 0.03); }
+.menu-item-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  gap: 1rem;
+}
+.menu-item-card-info { display: flex; flex-direction: column; gap: 0.15rem; flex: 1; }
+.menu-item-card-price {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.menu-item-allergen-badges { display: flex; gap: 0.3rem; margin-top: 0.2rem; }
+.allergen-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(var(--wine-rgb), 0.2);
+  color: var(--wine-light);
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+/* Allergens */
+.menu-allergens { margin-top: 2.5rem; padding-top: 0.5rem; }
+.allergen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.allergen-badge-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.6rem 0.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+.allergen-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--wine);
+  color: #f0e0d0;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+.allergen-icon-large { font-size: 1.2rem; }
+.allergen-name {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.allergen-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+/* Footer */
+.menu-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+.menu-footer-note {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+}
+.menu-footer-thanks {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+}
+.menu-footer-ornament {
+  color: var(--gold-dim);
+  font-size: 0.6rem;
+  letter-spacing: 12px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .menu-header { padding: 2rem 1rem 1.25rem; }
+  .menu-pricing-label { width: 65px; font-size: 0.58rem; }
+  .menu-item-price { width: 65px; font-size: 0.82rem; }
+  .menu-item-name { font-size: 0.86rem; }
+  .allergen-grid { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
+}
