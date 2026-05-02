@@ -17,7 +17,6 @@ export function AdminLayout() {
     <div className="admin-layout">
       <aside className="admin-sidebar">
         <div className="admin-sidebar-header">
-          <span className="admin-logo">🌰</span>
           <span className="admin-brand">La Castana</span>
         </div>
         <nav className="admin-nav">

@@ -27,7 +27,6 @@ export function LoginPage() {
     <div className="login-page">
       <div className="login-card">
         <div className="login-header">
-          <span className="login-icon">🔐</span>
           <h1 className="login-title">Administración</h1>
           <p className="login-subtitle">Bar La Castana</p>
         </div>
